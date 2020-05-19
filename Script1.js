@@ -12,6 +12,7 @@ function connect() {
             //used for disconnect
             Device = device;
             console.log(device);
+            document.write(5 + 6);
             return device.gatt.connect();
         })
         .then(function (server) {
@@ -27,6 +28,7 @@ function connect() {
             }
         })
         .catch(function (error) {
+            document.write('fail');
             console.error('fail', error);
         });
 }
